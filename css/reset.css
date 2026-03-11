@@ -50,6 +50,10 @@ ol {
   list-style: none;
 }
 
+/* Links */
+a {
+  text-decoration: none;
+}
 /* Imagens responsivas */
 img,
 picture {
