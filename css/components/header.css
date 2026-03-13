@@ -1,5 +1,4 @@
 .header{
-    background-color: blue;
     position: fixed;
     top: 20px;
     left: 50%;
@@ -10,12 +9,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    padding: 0.255rem 1.25rem;
     background-color: #ffffff;
+    height: 72px;
+    
 }
 .logo a{
     align-items: center;
     padding: 20px 28px;
+
 }
 .logo img{
     height: 48px;
@@ -28,11 +30,12 @@
 .nav-center a,
 .nav-right a{
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 400;
+     color: #333333;
 }
 .nav-center a:hover,
 .nav-right a:hover{
-    color:blueviolet;
+   color:  #7c3aed;
 }
 .nav-right ul{
     display: flex;
@@ -45,4 +48,5 @@
 }
 .nav-right a:hover img{
     opacity: 0.7;
+    color: #7c3aed;
 }
