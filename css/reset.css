@@ -143,8 +143,7 @@ button {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
+} 
 /* Suporte a modo escuro */
 @media (prefers-color-scheme: dark) {
   html {
