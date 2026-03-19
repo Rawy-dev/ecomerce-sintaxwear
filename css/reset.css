@@ -1,152 +1,88 @@
-/* ===== ANDY BELL'S MODERN CSS RESET ===== */
+/* Reset CSS baseado no reset do Andy Bell */
 
-/* Aplicar box-sizing a todos os elementos */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-/* Remover margens padrão */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Configurações do HTML */
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Configurações do Body */
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Tipografia - Padrões */
+/* Remove default margin */
+body,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  line-height: 1.2;
-  overflow-wrap: break-word;
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
 }
 
-/* Parágrafos */
-p {
-  overflow-wrap: break-word;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
 }
 
-/* Listas */
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
 ul,
 ol {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-/* Links */
-a {
-  text-decoration: none;
-}
-/* Imagens responsivas */
+/* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
-  height: auto;
+	max-width: 100%;
+	display: block;
 }
 
-/* SVG responsivo */
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Formulários herdam fontes */
+/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
-/* Remover espaço padrão em textareas */
-textarea:not([rows]) {
-  min-height: 40px;
-}
-
-/* Vídeos responsivos */
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Remove espaço em branco embaixo de mídia */
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-}
-
-/* Tabelas */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Linhas */
-hr {
-  border: none;
-  border-top: 1px solid currentColor;
-  color: inherit;
-  overflow: visible;
-  height: 0;
-}
-
-/* Foco visível para acessibilidade */
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible,
-a:focus-visible {
-  outline: 2px solid;
-  outline-offset: 2px;
-}
-
-/* Remove comportamento padrão de buttons */
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-/* Acessibilidade - Respeitar preferências de movimento */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-} 
-/* Suporte a modo escuro */
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
